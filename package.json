@@ -1,7 +1,7 @@
 {
   "name": "grunt-strings2json",
   "description": "convert from *.strings to *.json",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/typora/grunt-strings2json",
   "author": {
     "name": "typora",
