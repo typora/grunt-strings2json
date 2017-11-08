@@ -25,7 +25,10 @@ module.exports = function(grunt) {
     // Iterate over all specified file groups.
     this.files.forEach(function(f) {
       // Concat specified files.
-      var content = f.src.filter(function(filepath) {
+      
+      var data = {};
+
+      f.src.filter(function(filepath) {
         // Warn on and remove invalid source files (if nonull was set).
         if (!grunt.file.exists(filepath)) {
           grunt.log.warn('Source file "' + filepath + '" not found.');
@@ -34,12 +37,10 @@ module.exports = function(grunt) {
           return true;
         }
       }).map(function(filepath) {
-        var data = i18nStringsFiles.readFileSync(filepath, options.encode || 'UTF-8');
-        return JSON.stringify(data);
-      }).join(grunt.util.normalizelf(options.separator));
+        Object.assign(data, i18nStringsFiles.readFileSync(filepath, options.encode || 'UTF-8'));
+      });
 
-      // Handle options.
-      content += options.punctuation;
+      var content = JSON.stringify(data);
 
       f.dest = f.dest.replace(/\.strings$/gi, ".json");
 
