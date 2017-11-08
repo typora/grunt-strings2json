@@ -1,0 +1,41 @@
+{
+  "name": "grunt-strings2json",
+  "description": "convert from *.strings to *.json",
+  "version": "0.1.0",
+  "homepage": "https://github.com/typora/grunt-strings2json",
+  "author": {
+    "name": "typora",
+    "email": "hi@typora.io"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typora/grunt-strings2json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typora/grunt-strings2json/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/typora/grunt-strings2json/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin", "i18n", "strings", "localization", "internationalization", "macOS"
+  ],
+  "dependencies": {
+    "i18n-strings-files": "^1.0.2"
+  }
+}
