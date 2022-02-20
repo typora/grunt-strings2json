@@ -1,7 +1,7 @@
 {
   "name": "grunt-strings2json",
   "description": "convert from *.strings to *.json",
-  "version": "0.1.2",
+  "version": "1.0.9",
   "homepage": "https://github.com/typora/grunt-strings2json",
   "author": {
     "name": "typora",
@@ -36,6 +36,6 @@
     "gruntplugin", "i18n", "strings", "localization", "internationalization", "macOS"
   ],
   "dependencies": {
-    "i18n-strings-files": "^1.0.2"
+    "i18n-strings-files": "^1.0.9"
   }
 }
