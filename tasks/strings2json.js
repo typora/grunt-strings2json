@@ -39,7 +39,7 @@ module.exports = function(grunt) {
       }).map(function(filepath) {
         var input = require("fs").readFileSync(filepath, options.encode || 'UTF-8');
         input = input.replace(/;\s*\/\*.+\*\//gm, ';');
-        Object.assign(data, i18nStringsFiles.parse(input);
+        Object.assign(data, i18nStringsFiles.parse(input));
       });
 
       var content = JSON.stringify(data);
