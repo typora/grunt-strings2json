@@ -37,7 +37,9 @@ module.exports = function(grunt) {
           return true;
         }
       }).map(function(filepath) {
-        Object.assign(data, i18nStringsFiles.readFileSync(filepath, options.encode || 'UTF-8'));
+        var input = require("fs").readFileSync(filepath, options.encode || 'UTF-8');
+        input = input.replace(/;\s*\/\*.+\*\//gm, ';');
+        Object.assign(data, i18nStringsFiles.parse(input);
       });
 
       var content = JSON.stringify(data);
